@@ -9,7 +9,7 @@ videoWriter = cv2.VideoWriter(
 
 success, frame = cameraCapture.read()
 numFramesRemaining = 10 * fps - 1  # 10 seconds of frames
-while numFramesRemaining > 0:
+while success and numFramesRemaining > 0:
     if frame is not None:
         videoWriter.write(frame)
     success, frame = cameraCapture.read()

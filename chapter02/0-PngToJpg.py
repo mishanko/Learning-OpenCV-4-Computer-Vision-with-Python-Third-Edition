@@ -1,7 +1,8 @@
 import cv2
 import sys
 
-image = cv2.imread('MyPic.png')
+image = cv2.imread("MyPic.png", cv2.IMREAD_UNCHANGED)
+print(image.shape)
 if image is None:
     print('Failed to read image from file')
     sys.exit(1)
